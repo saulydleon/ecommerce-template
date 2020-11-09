@@ -28,7 +28,7 @@ const getCartValue = (responses = []) => {
     });
 
     // return cart value
-    return `💵 In total: $${globalPrice}USD`;
+    return `💵 En total: $${globalPrice}CUC`;
 };
 
 // function for transform order to text
@@ -37,7 +37,7 @@ const transformOrderToText = (responses = []) => {
     let text = '';
 
     if (!responses.length) {
-        return '🤷‍ Your order is empty.';
+        return '🤷‍ El carrito está vacío.';
     }
 
     responses.map(item => {
@@ -140,7 +140,7 @@ router
             responses: [
                 {
                     type: 'text',
-                    elements: ['✅ Product has been added successfully. \n\n🛒 Your cart:']
+                    elements: ['✅ Producto añadido satisfactoriamente. \n\n🛒 El carrito:']
                 },
                 {
                     type: 'text',
@@ -179,7 +179,7 @@ router
             responses: [
                 {
                     type: 'text',
-                    elements: ['🛒 Your order summary:']
+                    elements: ['🛒 El carrito:']
                 },
                 {
                     type: 'text',
